@@ -10,6 +10,7 @@ public class Game
     private Player player = new Player();
     private Obstacles obstacles = new Obstacles();
     private bool isBoxVisible = true;
+    private int score = 0;
 
     public void Setup()
     {
@@ -26,6 +27,7 @@ public class Game
     public void Draw(Graphics g)
     {
         DrawGround(g);
+        DrawBoard(g);
 
         if (isBoxVisible)
         {
@@ -91,10 +93,59 @@ public class Game
     // methods to draw ground
     private void DrawGround(Graphics g)
     {
-        float groundHeight = Window.height - 50;
+        float groundHeight = Window.height - 100;
 
         Color groundColor = ColorTranslator.FromHtml("#964B00");
         Brush groundBrush = new SolidBrush(groundColor);
-        g.FillRectangle(groundBrush, 1, groundHeight, Window.width, Window.height);
+        g.FillRectangle(groundBrush, 0, groundHeight, Window.width, Window.height);
+    }
+
+    // methods to draw scoreboard
+    private void DrawBoard(Graphics g)
+    {
+        // draw scoreboard
+        float boardWidth = 100;
+        float boardHeight = 30;
+        float boardX = Window.width - boardWidth;
+        float boardY = 1;
+
+        Brush boardBrush = new SolidBrush(Color.Black);
+        g.FillRectangle(boardBrush, boardX, boardY, boardWidth, boardHeight);
+
+        // write score
+        float scoreX = Window.width - 50;
+        float scoreY = (float)(boardHeight * 0.5);
+
+        Font font = new Font("Arial", 10);
+        Brush textBrush = new SolidBrush(Color.White);
+
+        StringFormat format = new StringFormat();
+        format.LineAlignment = StringAlignment.Center;
+        format.Alignment = StringAlignment.Center;
+
+        g.DrawString("Score: " + score, font, textBrush, scoreX, scoreY, format);
+    }
+
+    // methods to check for collisions or intersections
+    public bool IntersectPoints(Player player, Obstacles obstacles)
+    {
+        float px = player.GetX();
+        float py = player.GetY();
+        float pw = player.GetW();
+        float ph = player.GetH();
+
+        float x = obstacles.GetX();
+        float y = obstacles.GetY();
+        float w = obstacles.GetW();
+        float h = obstacles.GetH();
+
+        if (px >= x)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

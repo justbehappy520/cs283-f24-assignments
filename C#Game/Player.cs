@@ -10,8 +10,8 @@ public class Player
     // instance variables for Player's position and size
     private float x;
     private float y;
-    private float width = 30;
-    private float height = 30;
+    private float width = 50;
+    private float height = 50;
     private float speed; // speed of the player's character
 
 
@@ -23,9 +23,9 @@ public class Player
     public void Reset()
     {
         x = (float)(Window.width * 0.5) - (float)(width * 0.5);
-        y = (Window.height - 50) - (float)(height * 0.5);
+        y = (Window.height - 100) - (float)(height * 0.75);
 
-        speed = 50.0f;
+        speed = 10.0f;
     }
 
     public void Update(float dt)
@@ -46,7 +46,7 @@ public class Player
             x += speed;
             if (x + width > Window.width)
             {
-                x = width; // prevent from moving off screen
+                x = Window.width - width; // prevent from moving off screen
             }
         }
         else if (key.KeyCode == Keys.A || key.KeyCode == Keys.Left)
@@ -54,14 +54,29 @@ public class Player
             x -= speed;
             if (x < 0)
             {
-                x = Window.width - width; // prevent from moving off screen
+                x = 0; // prevent from moving off screen
             }
         }
     }
 
-    // method to draw boundaries
-    public Rectangle GetBounds()
+    // getter methods??
+    public float GetX()
     {
-        return new Rectangle((int)x, (int)y, (int)width, (int)height);
+        return x;
+    }
+
+    public float GetY()
+    {
+        return y;
+    }
+
+    public float GetW()
+    {
+        return width;
+    }
+
+    public float GetH()
+    {
+        return height;
     }
 }

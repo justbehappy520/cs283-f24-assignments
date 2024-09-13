@@ -13,8 +13,8 @@ public class Obstacles
         private float x;
         private float y;
         private float speed;
-        private float width = 10;
-        private float height = 10;
+        private float width = 20;
+        private float height = 20;
         private static Random rng = new Random();
 
         public Obstacle()
@@ -59,16 +59,30 @@ public class Obstacles
             return y > Window.height;
         }
 
-        // method to draw boundaries
-        public Rectangle GetBounds()
+        // getter methods??
+        public float GetX()
         {
-            return new Rectangle((int)x, (int)y, (int)width, (int)height);
+            return x;
+        }
+
+        public float GetY()
+        {
+            return y;
+        }
+
+        public float GetW()
+        {
+            return width;
+        }
+
+        public float GetH()
+        {
+            return height;
         }
     }
+    // for the management of more than one obstacle, currently only have one
     private List<Obstacle> obstacleList;
     private int maxObstacles = 1;
-    private float spawnDelay = 7.0f;
-    private float timeSinceLastSpawn = 0.0f;
 
     public Obstacles()
     {
@@ -85,7 +99,6 @@ public class Obstacles
         {
             obstacle.Reset();
         }
-        timeSinceLastSpawn = 0.0f;
     }
 
     public void Draw(Graphics g)
@@ -104,14 +117,6 @@ public class Obstacles
             obstacle.Update(dt);
         }
 
-        // spawns in new obstacles once delay time has eclipsed
-        timeSinceLastSpawn += dt;
-        if (timeSinceLastSpawn >= spawnDelay)
-        {
-            obstacleList.Add(new Obstacle());
-            timeSinceLastSpawn = 0.0f;
-        }
-
         // removes the obstacle at the end
         for (int i = obstacleList.Count - 1; i >= 0; i--)
         {
@@ -122,10 +127,24 @@ public class Obstacles
         }
     }
 
-    // methods to check for collisions
-    public static bool CheckCollision(Player player)
+    // getter methods??
+    public float GetX()
     {
-        Rectangle boundaries = Obstacle.GetBounds();
-        return boundaries.IntersectsWith(player.GetBounds());
+        return Obstacle.GetX();
+    }
+
+    public float GetY()
+    {
+        return Obstacle.GetY();
+    }
+
+    public float GetW()
+    {
+        return Obstacle.GetW();
+    }
+
+    public float GetH()
+    {
+        return Obstacle.GetH();
     }
 }
