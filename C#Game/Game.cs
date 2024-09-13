@@ -16,12 +16,14 @@ public class Game
     {
         player.Reset();
         obstacles.Reset();
+        score = 0;
     }
 
     public void Update(float dt)
     {
         player.Update(dt);
         obstacles.Update(dt);
+        Intersects();
     }
 
     public void Draw(Graphics g)
@@ -127,25 +129,20 @@ public class Game
     }
 
     // methods to check for collisions or intersections
-    public bool IntersectPoints(Player player, Obstacles obstacles)
+    public void Intersects()
     {
         float px = player.GetX();
         float py = player.GetY();
-        float pw = player.GetW();
-        float ph = player.GetH();
+        float pw = player.GetWidth();
+        float ph = player.GetHeight();
 
-        float x = obstacles.GetX();
-        float y = obstacles.GetY();
-        float w = obstacles.GetW();
-        float h = obstacles.GetH();
-
-        if (px >= x)
+        foreach (var obstacle in obstacles.GetObstaclesList())
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            if (obstacle.IntersectPoints(px, py, pw, ph, obstacle))
+            {
+                obstacle.Reset();
+                score++;
+            }
         }
     }
 }

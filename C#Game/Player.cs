@@ -59,7 +59,7 @@ public class Player
         }
     }
 
-    // getter methods??
+    // getter methods for collision checking
     public float GetX()
     {
         return x;
@@ -70,12 +70,12 @@ public class Player
         return y;
     }
 
-    public float GetW()
+    public float GetWidth()
     {
         return width;
     }
 
-    public float GetH()
+    public float GetHeight()
     {
         return height;
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Media;
+using System.Reflection;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
@@ -59,7 +60,7 @@ public class Obstacles
             return y > Window.height;
         }
 
-        // getter methods??
+        // getter methods for collision checking
         public float GetX()
         {
             return x;
@@ -70,14 +71,46 @@ public class Obstacles
             return y;
         }
 
-        public float GetW()
+        public float GetWidth()
         {
             return width;
         }
 
-        public float GetH()
+        public float GetHeight()
         {
             return height;
+        }
+
+        // methods to check for collisions
+        public bool IntersectPoints(float px, float py, float pw, float ph, Obstacle obstacle)
+        {
+            float x = obstacle.GetX();
+            float y = obstacle.GetY();
+            float w = obstacle.GetWidth();
+            float h = obstacle.GetHeight();
+
+            // top left of obstacle in player
+            if (x >= px && x <= px + pw && y <= py + ph && y >= py)
+            {
+                return true;
+            }
+            // top right of obstacle in player
+            else if (x + w >= px && x + w <= px + pw && y <= py + ph && y >= py)
+            {
+                return true;
+            }
+            // bottom left of obstacle in player
+            else if (x >= px && x <= px + pw && y + h <= py + ph && y + h >= py)
+            {
+                return true;
+            }
+            // bottom right of obstacle in player
+            else if (x + w >= px && x + w <= px + pw &&
+                y + h <= py + ph && y + h >= py)
+            {
+                return true;
+            }
+            return false;
         }
     }
     // for the management of more than one obstacle, currently only have one
@@ -91,6 +124,11 @@ public class Obstacles
         {
             obstacleList.Add(new Obstacle());
         }
+    }
+
+    public List<Obstacle> GetObstaclesList()
+    {
+        return obstacleList;
     }
 
     public void Reset()
@@ -125,26 +163,5 @@ public class Obstacles
                 obstacleList.RemoveAt(i);
             }
         }
-    }
-
-    // getter methods??
-    public float GetX()
-    {
-        return Obstacle.GetX();
-    }
-
-    public float GetY()
-    {
-        return Obstacle.GetY();
-    }
-
-    public float GetW()
-    {
-        return Obstacle.GetW();
-    }
-
-    public float GetH()
-    {
-        return Obstacle.GetH();
     }
 }
