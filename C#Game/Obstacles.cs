@@ -37,7 +37,7 @@ public class Obstacles
 
             if (FallenOffScreen())
             {
-                GameOver();
+                Reset();
             }
         }
 
@@ -111,12 +111,6 @@ public class Obstacles
                 return true;
             }
             return false;
-        }
-
-        // method to end game
-        private void GameOver()
-        {
-            EndGame();
         }
     }
     // for the management of more than one obstacle, currently only have one
