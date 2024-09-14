@@ -11,6 +11,7 @@ public class Game
     private Obstacles obstacles = new Obstacles();
     private bool isBoxVisible = true;
     private int score = 0;
+    private GameState currentState = GameState.GameStart;
 
     public void Setup()
     {
@@ -28,6 +29,18 @@ public class Game
 
     public void Draw(Graphics g)
     {
+        if (currentState == GameState.GameStart)
+        {
+            DrawGameStart(g);
+            return;
+        }
+
+        if (currentState == GameState.GameStop)
+        {
+            DrawGameStop(g);
+            return;
+        }
+
         DrawGround(g);
         DrawBoard(g);
 
@@ -42,9 +55,14 @@ public class Game
 
     public void MouseClick(MouseEventArgs mouse)
     {
-        if (mouse.Button == MouseButtons.Left)
+        if (currentState == GameState.GameStart)
         {
-            System.Console.WriteLine(mouse.Location.X + ", " + mouse.Location.Y);
+            currentState = GameState.GameRun;
+        }
+        else if (currentState == GameState.GameStop)
+        {
+            currentState = GameState.GameRun;
+            ResetGame();
         }
     }
 
@@ -144,5 +162,57 @@ public class Game
                 score++;
             }
         }
+    }
+
+    // different states of the game
+    public enum GameState
+    {
+        GameStart,
+        GameRun,
+        GameStop
+    }
+
+    public void EndGame()
+    {
+        currentState = GameState.GameStop;
+    }
+
+    private void ResetGame()
+    {
+        player.Reset();
+        obstacles.Reset();
+        score = 0;
+    }
+
+    public void DrawGameStart(Graphics g)
+    {
+        float startX = (float)(Window.width * 0.5);
+        float startY = (float)(Window.height * 0.5);
+
+        Font font = new Font("Arial", 24);
+        Brush textBrush = new SolidBrush(Color.Black);
+
+        StringFormat format = new StringFormat();
+        format.LineAlignment = StringAlignment.Center;
+        format.Alignment = StringAlignment.Center;
+
+        g.DrawString("Click anywhere to begin.", font, textBrush, startX, startY, format);
+    }
+
+    public void DrawGameStop(Graphics g)
+    {
+        float stopX = (float)(Window.width * 0.5);
+        float stopY = (float)(Window.height * 0.5);
+
+        Font font = new Font("Arial", 24);
+        Brush textBrush = new SolidBrush(Color.Black);
+
+        StringFormat format = new StringFormat();
+        format.LineAlignment = StringAlignment.Center;
+        format.Alignment = StringAlignment.Center;
+
+        g.DrawString("GAME OVER.", font, textBrush, stopX, stopY - 50, format);
+        g.DrawString("Your Score Is: " + score, font, textBrush, stopX, stopY, format);
+        g.DrawString("Click anywhere to begin.", font, textBrush, stopX, stopY + 50, format);
     }
 }
