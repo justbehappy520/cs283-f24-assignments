@@ -22,3 +22,7 @@ suspicion the program is still running in the background.
 I never quite understood how to get the game to terminate through having one of the obstacles touch the 
 bottom of the screen. So while there is code for a GameStop screen, it never shows up, and the game runs
 infinitely.
+
+Recording: https://github.com/user-attachments/assets/1067278f-c0e8-4f53-b7e6-050c3331f182
+I tried dragging and dropping multiple times, but it keeps appearing as a link rather than an embed. I'm sorry
+but I don't really know how to fix that.
