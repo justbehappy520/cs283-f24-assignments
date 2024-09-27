@@ -4,6 +4,9 @@ Assignment framework for CS283 Game Programming
 A04
 Flythrough: 
 Points of Interest:
+![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
+![donut_x_o](https://github.com/user-attachments/assets/f0d8eef1-bc53-4614-90b9-d62168487e86)
+
 
 A03
 Home Area: ![Screenshot 2024-09-20 172802](https://github.com/user-attachments/assets/e93c8685-0d76-455b-a4f2-813b2ba1b747)
