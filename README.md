@@ -2,7 +2,7 @@
 Assignment framework for CS283 Game Programming
 
 A02
-https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
+??: https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
 I am unsure how to make a gif. So all I can provide is a questionable screen recording. I hope that this is acceptable.
 Thank you!
 
@@ -14,3 +14,5 @@ They ended up turning out rather boring, but after sinking so much time into fid
 
 Skybox: https://polyhaven.com/a/autumn_field_puresky
 By Sergej Majboroda
+
+A04
