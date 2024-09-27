@@ -6,6 +6,7 @@ Flythrough:
 Points of Interest:
 ![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
 ![donut_x_o](https://github.com/user-attachments/assets/f0d8eef1-bc53-4614-90b9-d62168487e86)
+So the video is really scuffed becaue I recorded it on my phone because the snipping tool wouldn't work(?) and I forgot my Unity password. I really apologize for the horrible quality. Also, I'm unsure what exactly happened to my game screen.
 
 
 A03
