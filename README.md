@@ -1,6 +1,12 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+A05
+Rigid Camera:
+https://github.com/user-attachments/assets/9e7a9b4a-5156-443f-ac9a-85851e034b03
+Spring Camera:
+https://github.com/user-attachments/assets/d2d6a25c-fa4b-435d-b3c9-e8d824a55686
+
 A04
 Flythrough: https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
 Points of Interest:
