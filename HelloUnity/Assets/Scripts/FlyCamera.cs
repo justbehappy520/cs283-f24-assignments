@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class FlyCamera : MonoBehaviour
 {
     public float speed = 50.0f; //max speed of camera
-    public float sensitivity = 0.25f; // keep it between 0 and 1
     public bool smooth = true; // make camera movement smooth
     public float acceleration = 0.05f;
     private float actSpeed = 0.0f; // keep it between 0 and 1
