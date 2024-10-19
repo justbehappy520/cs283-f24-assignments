@@ -9,8 +9,9 @@ A06
 
 2.2.1:https://github.com/user-attachments/assets/88444099-c09f-40d3-b8b7-3061e89736f5
 
-2.2.2:
+2.2.2:https://github.com/user-attachments/assets/75fd9236-49ca-4cea-9d28-63508a0a7985
 
+Something is wrong with 2.2.2, it definitely has something to do with how I'm pulling some random angle equations to calculate the rotation. I'm still not entirely sure how one exactly does this.
 
 
 A05
