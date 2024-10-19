@@ -28,19 +28,25 @@ public class TwoLinkController : MonoBehaviour
         Vector3 toTarget = targetPosition - ballPosition;
         float distanceToTarget = toTarget.magnitude;
 
-        // check if the target can be reached, compare to length
-        float totalTailLength = upperTailLength + lowerTaillength;
+        /*float totalTailLength = upperTailLength + lowerTaillength;
         if (distanceToTarget > totalTailLength)
         {
             toTarget = toTarget.normalized * totalTailLength;
             targetPosition = ballPosition + toTarget;
-        }
+        }*/
 
-        float cosine = ((upperTailLength * upperTailLength + lowerTaillength *
-            lowerTaillength - distanceToTarget * distanceToTarget) /
-            (2 * upperTailLength * lowerTaillength));
+        float a = upperTailLength;
+        float b = lowerTaillength;
+        float c = distanceToTarget;
+
+        float cosine = Mathf.Clamp((a * a + b * b - c * c) / (2 * a * b), -1f,
+            1f);
         float middleAngle = Mathf.Acos(cosine) * Mathf.Rad2Deg;
-        float ballAngle = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg;
+        float angelToTarget = Mathf.Atan2(toTarget.y, toTarget.x) * Mathf.Rad2Deg;
+        float bAngle = Mathf.Clamp((a * a + c * c - b * b) / (2 * a * b), -1f,
+            1f);
+        float bAngleOffset = Mathf.Acos(bAngle) * Mathf.Rad2Deg;
+        float ballAngle = angelToTarget - bAngleOffset;
 
         ballJoint.localRotation = Quaternion.Euler(0, 0, ballAngle);
         middleJoint.localRotation = Quaternion.Euler(0, 0, middleAngle);
