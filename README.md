@@ -2,7 +2,7 @@
 Assignment framework for CS283 Game Programming
 
 A06
-2.1.1:
+2.1.1:https://github.com/user-attachments/assets/318b1117-ea85-4d47-a5b8-2e3cfb21852d
 2.1.2:
 2.2.1:https://github.com/user-attachments/assets/88444099-c09f-40d3-b8b7-3061e89736f5
 2.2.2:
