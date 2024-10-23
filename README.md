@@ -13,19 +13,19 @@ https://github.com/user-attachments/assets/75fd9236-49ca-4cea-9d28-63508a0a7985
 
 Something is wrong with 2.2.2, it definitely has something to do with how I'm pulling some random angle equations to calculate the rotation. I'm still not entirely sure how one exactly does this.
 
-
 # A05
-**Rigid Camera**: https://github.com/user-attachments/assets/9e7a9b4a-5156-443f-ac9a-85851e034b03
-Spring Camera:
+### Rigid Camera
+https://github.com/user-attachments/assets/9e7a9b4a-5156-443f-ac9a-85851e034b03
+### Spring Camera
 https://github.com/user-attachments/assets/d2d6a25c-fa4b-435d-b3c9-e8d824a55686
 
-
-
 # A04
-FlyCamera: https://github.com/user-attachments/assets/1cac8d6b-8dbc-4779-9dbd-8225b6f2b3dd
-Tour: https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
+### FlyCamera
+https://github.com/user-attachments/assets/1cac8d6b-8dbc-4779-9dbd-8225b6f2b3dd
+### Tour
+https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
 
-Points of Interest:
+### Points of Interest
 ![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
 ![donut_x_o](https://github.com/user-attachments/assets/f0d8eef1-bc53-4614-90b9-d62168487e86)
 
@@ -35,9 +35,10 @@ By SoyTancha
 
 
 # A03
-Home Area: ![Screenshot 2024-09-20 172802](https://github.com/user-attachments/assets/e93c8685-0d76-455b-a4f2-813b2ba1b747)
-
-Quest Area: ![Screenshot 2024-09-20 172820](https://github.com/user-attachments/assets/95189352-f671-4e78-80ef-2cfd7d35f7fc)
+### Home Area
+![Screenshot 2024-09-20 172802](https://github.com/user-attachments/assets/e93c8685-0d76-455b-a4f2-813b2ba1b747)
+### Quest Area
+![Screenshot 2024-09-20 172820](https://github.com/user-attachments/assets/95189352-f671-4e78-80ef-2cfd7d35f7fc)
 
 They ended up turning out rather boring, but after sinking so much time into fiddling with donuts, I lost steam when I got to the Quest Area. They're supposed to be marshmallows... I'm unsure if the final poly count if acceptable.
 
