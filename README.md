@@ -29,7 +29,7 @@ https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
 ![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
 ![donut_x_o](https://github.com/user-attachments/assets/f0d8eef1-bc53-4614-90b9-d62168487e86)
 
-Character: https://www.turbosquid.com/3d-models/animated-lowpoly-dragon-2184488
+**Character:** https://www.turbosquid.com/3d-models/animated-lowpoly-dragon-2184488
 By SoyTancha
 
 
@@ -42,7 +42,7 @@ By SoyTancha
 
 They ended up turning out rather boring, but after sinking so much time into fiddling with donuts, I lost steam when I got to the Quest Area. They're supposed to be marshmallows... I'm unsure if the final poly count if acceptable.
 
-Skybox: https://polyhaven.com/a/autumn_field_puresky
+**Skybox:** https://polyhaven.com/a/autumn_field_puresky
 By Sergej Majboroda
 
 
