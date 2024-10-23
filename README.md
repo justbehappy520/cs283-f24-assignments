@@ -1,23 +1,21 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
-A06
-
-2.1.1:https://github.com/user-attachments/assets/318b1117-ea85-4d47-a5b8-2e3cfb21852d
-
-2.1.2:https://github.com/user-attachments/assets/c35e92ae-4275-4685-b250-49a0d2cdaf89
-
-2.2.1:https://github.com/user-attachments/assets/88444099-c09f-40d3-b8b7-3061e89736f5
-
-2.2.2:https://github.com/user-attachments/assets/75fd9236-49ca-4cea-9d28-63508a0a7985
+# A06
+### 2.1.1
+https://github.com/user-attachments/assets/318b1117-ea85-4d47-a5b8-2e3cfb21852d
+### 2.1.2
+https://github.com/user-attachments/assets/c35e92ae-4275-4685-b250-49a0d2cdaf89
+### 2.2.1
+https://github.com/user-attachments/assets/88444099-c09f-40d3-b8b7-3061e89736f5
+### 2.2.2
+https://github.com/user-attachments/assets/75fd9236-49ca-4cea-9d28-63508a0a7985
 
 Something is wrong with 2.2.2, it definitely has something to do with how I'm pulling some random angle equations to calculate the rotation. I'm still not entirely sure how one exactly does this.
 
 
 # A05
-Rigid Camera:
-https://github.com/user-attachments/assets/9e7a9b4a-5156-443f-ac9a-85851e034b03
-
+**Rigid Camera**: https://github.com/user-attachments/assets/9e7a9b4a-5156-443f-ac9a-85851e034b03
 Spring Camera:
 https://github.com/user-attachments/assets/d2d6a25c-fa4b-435d-b3c9-e8d824a55686
 
