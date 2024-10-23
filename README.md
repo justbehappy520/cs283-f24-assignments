@@ -14,8 +14,7 @@ A06
 Something is wrong with 2.2.2, it definitely has something to do with how I'm pulling some random angle equations to calculate the rotation. I'm still not entirely sure how one exactly does this.
 
 
-A05
-
+# A05
 Rigid Camera:
 https://github.com/user-attachments/assets/9e7a9b4a-5156-443f-ac9a-85851e034b03
 
@@ -24,23 +23,20 @@ https://github.com/user-attachments/assets/d2d6a25c-fa4b-435d-b3c9-e8d824a55686
 
 
 
-A04
-
-Flythrough: https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
+# A04
+FlyCamera: https://github.com/user-attachments/assets/1cac8d6b-8dbc-4779-9dbd-8225b6f2b3dd
+Tour: https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
 
 Points of Interest:
 ![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
 ![donut_x_o](https://github.com/user-attachments/assets/f0d8eef1-bc53-4614-90b9-d62168487e86)
-
-So the video is really scuffed becaue I recorded it on my phone because the snipping tool wouldn't work(?) and I forgot my Unity password. I really apologize for the horrible quality. Also, I'm unsure what exactly happened to my game screen.
 
 Character: https://www.turbosquid.com/3d-models/animated-lowpoly-dragon-2184488
 By SoyTancha
 
 
 
-A03
-
+# A03
 Home Area: ![Screenshot 2024-09-20 172802](https://github.com/user-attachments/assets/e93c8685-0d76-455b-a4f2-813b2ba1b747)
 
 Quest Area: ![Screenshot 2024-09-20 172820](https://github.com/user-attachments/assets/95189352-f671-4e78-80ef-2cfd7d35f7fc)
@@ -52,7 +48,7 @@ By Sergej Majboroda
 
 
 
-A02
+# A02
 ??: https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
 
 I am unsure how to make a gif. So all I can provide is a questionable screen recording. I hope that this is acceptable.
