@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/d2d6a25c-fa4b-435d-b3c9-e8d824a55686
 ### FlyCamera
 https://github.com/user-attachments/assets/1cac8d6b-8dbc-4779-9dbd-8225b6f2b3dd
 ### Tour
-https://github.com/user-attachments/assets/5ff5ee90-c972-4aff-a9b2-b9c2f5230534
+https://github.com/user-attachments/assets/83565fd1-b2cc-4846-be8e-5d6eb5350275
 
 ### Points of Interest
 ![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
