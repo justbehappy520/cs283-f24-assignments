@@ -1,6 +1,8 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# A07: Motion and Collision
+
 # A06
 ### 2.1.1
 https://github.com/user-attachments/assets/318b1117-ea85-4d47-a5b8-2e3cfb21852d
@@ -51,7 +53,7 @@ By Sergej Majboroda
 ### 2D Game
 I think I lost the recording. I will track it down.
 
-# A01
+# A01: Hello CS283!
 ### Particle System
 https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
 
