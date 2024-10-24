@@ -29,6 +29,8 @@ https://github.com/user-attachments/assets/83565fd1-b2cc-4846-be8e-5d6eb5350275
 ![donut_mountain](https://github.com/user-attachments/assets/6e971077-83b7-4bad-b513-305972d050b1)
 ![donut_x_o](https://github.com/user-attachments/assets/f0d8eef1-bc53-4614-90b9-d62168487e86)
 
+### Character
+https://github.com/user-attachments/assets/9d064b91-ad21-473b-96e0-d8a62463ce41
 **Character:** https://www.turbosquid.com/3d-models/animated-lowpoly-dragon-2184488
 By SoyTancha
 
@@ -48,7 +50,8 @@ By Sergej Majboroda
 
 
 # A02
-??: https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
+### 2D Game
+https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
 
 I am unsure how to make a gif. So all I can provide is a questionable screen recording. I hope that this is acceptable.
 Thank you!
