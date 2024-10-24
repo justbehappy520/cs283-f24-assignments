@@ -31,9 +31,9 @@ https://github.com/user-attachments/assets/83565fd1-b2cc-4846-be8e-5d6eb5350275
 
 ### Character
 https://github.com/user-attachments/assets/9d064b91-ad21-473b-96e0-d8a62463ce41
+
 **Character:** https://www.turbosquid.com/3d-models/animated-lowpoly-dragon-2184488
 By SoyTancha
-
 
 
 # A03
@@ -47,10 +47,12 @@ They ended up turning out rather boring, but after sinking so much time into fid
 **Skybox:** https://polyhaven.com/a/autumn_field_puresky
 By Sergej Majboroda
 
-
-
 # A02
 ### 2D Game
+I think I lost the recording. I will track it down.
+
+# A01
+### Particle System
 https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
 
 I am unsure how to make a gif. So all I can provide is a questionable screen recording. I hope that this is acceptable.
