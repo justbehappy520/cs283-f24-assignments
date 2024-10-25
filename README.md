@@ -54,10 +54,6 @@ They ended up turning out rather boring, but after sinking so much time into fid
 **Skybox:** https://polyhaven.com/a/autumn_field_puresky
 By Sergej Majboroda
 
-# A02: Game in C#
-### 2D Game
-I think I lost the recording. I will track it down.
-
 # A01: Hello CS283!
 ### Particle System
 https://github.com/user-attachments/assets/ed9e2116-5f2b-4f16-aa95-a4948e38b2fd
