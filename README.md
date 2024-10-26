@@ -3,9 +3,11 @@ Assignment framework for CS283 Game Programming
 
 # A07: Motion and Collision
 ### Motion Controller
-
+https://github.com/user-attachments/assets/b4b5a9f2-3552-4b7c-bda1-81c67fa386df
 ### Collision Physics
+https://github.com/user-attachments/assets/15368c66-99b7-4616-91a1-b327890c2740
 
+**New Character:** https://www.turbosquid.com/3d-models/low-poly-ankylosaurus-rig-1630692 by RJAnimations
 
 # A06: Bezier Faster Stronger
 ### Spline with degree-1 polynomial
@@ -53,10 +55,6 @@ They ended up turning out rather boring, but after sinking so much time into fid
 
 **Skybox:** https://polyhaven.com/a/autumn_field_puresky
 By Sergej Majboroda
-
-# A02: Game in C#
-### 2D Game
-I think I lost the recording. I will track it down.
 
 # A01: Hello CS283!
 ### Particle System
