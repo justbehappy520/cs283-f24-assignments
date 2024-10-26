@@ -7,6 +7,8 @@ https://github.com/user-attachments/assets/b4b5a9f2-3552-4b7c-bda1-81c67fa386df
 ### Collision Physics
 https://github.com/user-attachments/assets/15368c66-99b7-4616-91a1-b327890c2740
 
+**New Character:** https://www.turbosquid.com/3d-models/low-poly-ankylosaurus-rig-1630692 by RJAnimations
+
 # A06: Bezier Faster Stronger
 ### Spline with degree-1 polynomial
 https://github.com/user-attachments/assets/318b1117-ea85-4d47-a5b8-2e3cfb21852d
