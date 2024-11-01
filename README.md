@@ -1,6 +1,10 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# A08: Collection Game
+
+**Collectible:** https://www.turbosquid.com/3d-models/food-free-2098576 by ithappy
+
 # A07: Motion and Collision
 ### Motion Controller
 https://github.com/user-attachments/assets/b4b5a9f2-3552-4b7c-bda1-81c67fa386df
