@@ -2,8 +2,16 @@
 Assignment framework for CS283 Game Programming
 
 # A08: Collection Game
+### Game Collection
+https://github.com/user-attachments/assets/d5e4e07a-2f62-4b7c-b82d-280f08363aaf
+### Spawner
+https://github.com/user-attachments/assets/68b4c312-abc4-45e3-a99d-0de5cbd3baa9
 
 **Collectible:** https://www.turbosquid.com/3d-models/food-free-2098576 by ithappy
+
+Something is wrong with my Spawner. The collectables that it spawns, it takes me two tries to activate the animation and have the object disappear. I'm not entirely sure what's wrong or how to fix, but I'm probably missing something in the triggers.
+
+Also I'm unsure what happened to my Game window. It's been like that since forever.
 
 # A07: Motion and Collision
 ### Motion Controller
