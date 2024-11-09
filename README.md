@@ -1,6 +1,11 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# A09: Wander
+**NPC**: https://www.turbosquid.com/3d-models/gingerbread-cookies-3d-1836164 by GetDeadEntertainment
+### Wander
+https://github.com/user-attachments/assets/638c167f-fb71-4d9b-a485-4e0dfdd518b6
+
 # A08: Collection Game
 ### Game Collection
 https://github.com/user-attachments/assets/d5e4e07a-2f62-4b7c-b82d-280f08363aaf
