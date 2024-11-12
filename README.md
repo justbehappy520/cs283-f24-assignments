@@ -1,6 +1,11 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# A10: Behavior
+### Minion
+
+### Unique
+
 # A09: Wander
 **NPC**: https://www.turbosquid.com/3d-models/gingerbread-cookies-3d-1836164 by GetDeadEntertainment
 ### Wander
