@@ -6,6 +6,8 @@ Assignment framework for CS283 Game Programming
 
 ### Unique
 
+**NPC**: https://www.turbosquid.com/3d-models/3d-model-cute-animated-demon-character-2184889 by SoyTancha
+
 # A09: Wander
 **NPC**: https://www.turbosquid.com/3d-models/gingerbread-cookies-3d-1836164 by GetDeadEntertainment
 ### Wander
