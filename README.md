@@ -1,6 +1,13 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# A10: Behavior
+### Minion
+https://github.com/user-attachments/assets/915a2e12-fd63-4876-a33a-06d83360de60
+### Unique
+
+**NPC**: https://www.turbosquid.com/3d-models/3d-model-cute-animated-demon-character-2184889 by SoyTancha
+
 # A09: Wander
 **NPC**: https://www.turbosquid.com/3d-models/gingerbread-cookies-3d-1836164 by GetDeadEntertainment
 ### Wander
