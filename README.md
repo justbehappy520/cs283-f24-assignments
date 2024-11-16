@@ -5,8 +5,7 @@ Assignment framework for CS283 Game Programming
 ### Minion
 https://github.com/user-attachments/assets/915a2e12-fd63-4876-a33a-06d83360de60
 ### Unique
-
-**NPC**: https://www.turbosquid.com/3d-models/3d-model-cute-animated-demon-character-2184889 by SoyTancha
+As I was making the recording for BehaviorUnique.cs, Unity kinda just crashed. I was also running into some issues with BehaviorUnique.cs not always working properly. I tested it earlier and the FleeBehavior was functioning fine, as was the WanderBehavior. I was struggling with QuoteBehavior though.
 
 # A09: Wander
 **NPC**: https://www.turbosquid.com/3d-models/gingerbread-cookies-3d-1836164 by GetDeadEntertainment
