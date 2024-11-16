@@ -12,6 +12,8 @@ public class PlayerMotionController : MonoBehaviour
 
     // movement variables
     public float moveSpeed;
+    public float gravity = -9.81f; // gravity force
+    float yVelocity = 0f; // vertical velocity for gravity
     Vector3 velocity;
     float horiInput; // horizontal keyboard input
     float vertInput; // vertical keyboard input
@@ -40,15 +42,21 @@ public class PlayerMotionController : MonoBehaviour
         // rotate player only around the y-axis
         transform.rotation = Quaternion.Euler(0, yRotate, 0);
 
-        // move camera
+        // player movement controls
         horiInput = Input.GetAxis("Horizontal");
         vertInput = Input.GetAxis("Vertical");
         dir = transform.forward * vertInput + transform.right * horiInput;
 
-        velocity = dir.normalized * moveSpeed;
+        // movement
+        Vector3 xVelocity = dir.normalized * moveSpeed;
+
+        // apply gravity
+        yVelocity += gravity * Time.deltaTime;
+        velocity = new Vector3(xVelocity.x, yVelocity, xVelocity.z);
+
         controller.Move(velocity * Time.deltaTime);
 
         // animations
-        animator.SetBool("isWalking", velocity.magnitude > 0);
+        animator.SetBool("isWalking", xVelocity.magnitude > 0.1f);
     }
 }

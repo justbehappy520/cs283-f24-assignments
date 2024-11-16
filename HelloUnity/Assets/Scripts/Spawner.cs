@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject prefab;
     public float range = 5.0f;
-    public int maxNumOfSpawn = 6;
+    public int maxNumOfSpawn = 3;
     public float spawnDelay = 1.0f;
 
     private int currentSpawnCount = 0;
@@ -29,6 +29,7 @@ public class Spawner : MonoBehaviour
     {
         while (spawnedCollectables.Count < maxNumOfSpawn)
         {
+            // spawn new collectable
             GameObject newCollectable = SpawnCollectable();
             spawnedCollectables.Add(newCollectable);
 
@@ -62,6 +63,7 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject collectable in spawnedCollectables)
             {
+                // respawn collectables when they have been collected
                 if (collectable != null && !collectable.activeInHierarchy)
                 {
                     SpawnCollectable(collectable);

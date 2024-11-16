@@ -32,6 +32,7 @@ public class CollectionGame : MonoBehaviour
         // increase counter and update UI
         collectCounter++;
         UpdateCollectText();
+        Debug.Log("collect");
 
         // trigger animation
         CollectableAnimation animate = collectable.GetComponent<CollectableAnimation>();

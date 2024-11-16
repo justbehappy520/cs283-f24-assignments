@@ -10,28 +10,32 @@ public class CollectableAnimation : MonoBehaviour
 
     private Vector3 originalScale;
     private float timer = 0.0f;
+    public bool trigger;
 
     private void Start()
     {
         // store the initial scale of the object
         originalScale = transform.localScale;
-        enabled = false; // disable Update by default
+        trigger = false;
     }
 
     private void Update()
     {
-        // move up and shrink
-        transform.position += Vector3.up * floatSpd * Time.deltaTime;
-        transform.localScale = Vector3.Lerp(originalScale, Vector3.zero,
-            timer / duration);
-
-        // increment timer
-        timer += Time.deltaTime;
-
-        // bye-bye object
-        if (timer >= duration)
+        if (trigger)
         {
-            gameObject.SetActive(false);
+            // move up and shrink
+            transform.position += Vector3.up * floatSpd * Time.deltaTime;
+            transform.localScale = Vector3.Lerp(originalScale, Vector3.zero,
+                timer / duration);
+
+            // increment timer
+            timer += Time.deltaTime;
+
+            // bye-bye object
+            if (timer >= duration)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -39,6 +43,6 @@ public class CollectableAnimation : MonoBehaviour
     {
         // reset timer
         timer = 0.0f;
-        enabled = true; // start Update when called
+        trigger = true;
     }
 }
