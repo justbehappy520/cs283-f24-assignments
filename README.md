@@ -5,6 +5,7 @@ Assignment framework for CS283 Game Programming
 ### Minion
 https://github.com/user-attachments/assets/915a2e12-fd63-4876-a33a-06d83360de60
 ### Unique
+https://github.com/user-attachments/assets/d78a4da4-1c34-4e89-9c65-fb41021595a1
 As I was making the recording for BehaviorUnique.cs, Unity kinda just crashed. I was also running into some issues with BehaviorUnique.cs not always working properly. I tested it earlier and the FleeBehavior was functioning fine, as was the WanderBehavior. I was struggling with QuoteBehavior though.
 
 # A09: Wander
