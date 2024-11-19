@@ -7,6 +7,7 @@ public class CollectionGame : MonoBehaviour
 {
     public int collectCounter { get; private set; }
     public TextMeshProUGUI collectText;
+    public Spawner spawner;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,11 @@ public class CollectionGame : MonoBehaviour
         else
         {
             collectable.SetActive(false);
+        }
+
+        if (spawner != null)
+        {
+            spawner.RespawnSingleCollectable(collectable);
         }
     }
 

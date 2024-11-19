@@ -34,6 +34,7 @@ public class CollectableAnimation : MonoBehaviour
             // bye-bye object
             if (timer >= duration)
             {
+                Debug.Log($"{gameObject.name} animation complete. Deactivating.");
                 gameObject.SetActive(false);
             }
         }

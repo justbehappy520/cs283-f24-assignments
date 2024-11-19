@@ -5,8 +5,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject prefab;
-    public float range = 5.0f;
-    public int maxNumOfSpawn = 3;
+    public float range = 50.0f;
+    public int maxNumOfSpawn = 5;
     public float spawnDelay = 1.0f;
 
     private int currentSpawnCount = 0;
@@ -52,24 +52,31 @@ public class Spawner : MonoBehaviour
         {
             // if an existing collectable was passed in, move then reativate it
             existingCollectable.transform.position = spawnPos;
+            existingCollectable.SetActive(false); 
             existingCollectable.SetActive(true);
+            Debug.Log($"Respawned {existingCollectable.name} at position {spawnPos}");
+
+            GameObject marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            marker.transform.position = spawnPos;
+            marker.transform.localScale = Vector3.one * 0.5f;
+
             return existingCollectable;
         }
     }
 
-    private IEnumerator Respawn()
+    public void RespawnSingleCollectable(GameObject collectable)
     {
-        while (true)
+        StartCoroutine(Respawn(collectable));
+    }
+    private IEnumerator Respawn(GameObject collectable)
+    {
+        yield return new WaitForSeconds(1.0f); // Wait before respawning
+
+        if (collectable != null && !collectable.activeInHierarchy)
         {
-            foreach (GameObject collectable in spawnedCollectables)
-            {
-                // respawn collectables when they have been collected
-                if (collectable != null && !collectable.activeInHierarchy)
-                {
-                    SpawnCollectable(collectable);
-                }
-            }
-            yield return new WaitForSeconds(1.0f);
+            // Respawn the collectable at a new position
+            Debug.Log($"Respawning {collectable.name} at position {collectable.transform.position}");
+            SpawnCollectable(collectable);  // Respawn collectable
         }
     }
 }

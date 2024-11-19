@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class BehaviorMinion : MonoBehaviour
 {
     public Transform target; // player character
-    public Transform home; // npc's home base or soemthing
     public float attackRange = 5.0f;
     public float followRange = 20.0f;
     public float wanderRadius = 10.0f;

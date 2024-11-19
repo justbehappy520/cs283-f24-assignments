@@ -12,14 +12,41 @@ public class Teleport : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Triggered");
             StartCoroutine(TP());
         }
     }
 
     IEnumerator TP()
     {
+        // temporarily disable collider
+        Collider portalCollider = GetComponent<Collider>();
+        portalCollider.enabled = false;
         yield return new WaitForSeconds(delay);
+
+        // teleport
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+        }
         Vector3 destination = portal.position;
-        player.transform.position = destination;
+        Debug.Log("Teleporting player to: " + destination);
+
+        // use character controller move method in case that was a problem
+        CharacterController cc = player.GetComponent<CharacterController>();
+        if (cc != null)
+        {
+            cc.enabled = false;
+            player.transform.position = destination;
+            cc.enabled = true;
+        }
+        else
+        {
+            player.transform.position = destination;
+        }
+
+        // re-enable collider
+        portalCollider.enabled = true;
     }
 }
