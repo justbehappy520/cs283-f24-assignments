@@ -7,20 +7,35 @@ public class Teleport : MonoBehaviour
     public Transform portal;
     public GameObject player;
     public float delay = 2.5f;
+    private Collider portalCollider;
+
+    private void Start()
+    {
+        portalCollider = GetComponent<Collider>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Triggered");
+            Debug.Log("Teleporting Player...");
             StartCoroutine(TP());
         }
     }
 
+    /*private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player Teleported!!");
+            yield return new WaitForSeconds(delay);
+            portalCollider.enabled = true;
+        }
+    }*/
+
     IEnumerator TP()
     {
         // temporarily disable collider
-        Collider portalCollider = GetComponent<Collider>();
         portalCollider.enabled = false;
         yield return new WaitForSeconds(delay);
 
@@ -47,6 +62,7 @@ public class Teleport : MonoBehaviour
         }
 
         // re-enable collider
+        yield return new WaitForSeconds(delay);
         portalCollider.enabled = true;
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class BehaviorUnique : MonoBehaviour
 {
     public Transform target;
-    public float quoteRange =305.0f;
+    public float quoteRange =30.0f;
     public float fleeRange = 10.0f;
     public float wanderRadius = 10.0f;
 
@@ -46,13 +46,17 @@ public class BehaviorUnique : MonoBehaviour
             .OpenBranch(
             BT.Condition(() => InRange(quoteRange) && !hasQuoted),
             BT.RunCoroutine(QuoteBehavior));
+        BTNode unquote = BT.Sequence()
+            .OpenBranch(
+            BT.Condition(() => !InRange(quoteRange) && hasQuoted),
+            BT.RunCoroutine(UnQuoteBehavior));
         BTNode wander = BT.Sequence()
             .OpenBranch(
             BT.Condition(() => !InRange(fleeRange)),
             BT.RunCoroutine(WanderBehavior));
 
         Selector selector = BT.Selector();
-        selector.OpenBranch(flee, quote, wander);
+        selector.OpenBranch(flee, quote, unquote, wander);
         m_btRoot.OpenBranch(selector);
     }
 
@@ -85,7 +89,7 @@ public class BehaviorUnique : MonoBehaviour
 
     private IEnumerator<BTState> FleeBehavior()
     {
-        Debug.Log("Ahhhhh");
+        Debug.Log("Fleeing: Ahhhhh");
         float distance = Vector3.Distance(transform.position, target.position);
 
         while (InRange(fleeRange))
@@ -112,6 +116,15 @@ public class BehaviorUnique : MonoBehaviour
         yield return BTState.Success;
     }
 
+    private IEnumerator<BTState> UnQuoteBehavior()
+    {
+        if (hasQuoted)
+        {
+            hasQuoted = false;
+        }
+        yield return BTState.Success;
+    }
+
     private bool InRange(float range)
     {
         bool inRange = Vector3.Distance(transform.position, target.position) <= range;
@@ -122,6 +135,7 @@ public class BehaviorUnique : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Quoted");
             hasQuoted = false;
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollectableAnimation : MonoBehaviour
 {
-    public float floatSpd = 1.0f;
+    public float floatSpd = 5.0f;
     public float shrinkSpd = 1.0f;
     public float duration = 1.0f;
 
@@ -34,7 +34,6 @@ public class CollectableAnimation : MonoBehaviour
             // bye-bye object
             if (timer >= duration)
             {
-                Debug.Log($"{gameObject.name} animation complete. Deactivating.");
                 gameObject.SetActive(false);
             }
         }
