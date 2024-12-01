@@ -8,6 +8,8 @@ TagManager:
   - NPC
   - TP
   - Green Tree
+  - Tall Hedge
+  - Med Hedge
   layers:
   - Default
   - TransparentFX
