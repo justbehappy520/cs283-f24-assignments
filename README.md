@@ -1,6 +1,15 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# Final Project
+### Player Character
+
+### Ghost NPC
+
+### Key Collection
+
+**Resources**: 
+
 # A10: Behavior
 ### Minion
 https://github.com/user-attachments/assets/915a2e12-fd63-4876-a33a-06d83360de60
