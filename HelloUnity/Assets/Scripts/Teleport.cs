@@ -23,16 +23,6 @@ public class Teleport : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player Teleported!!");
-            yield return new WaitForSeconds(delay);
-            portalCollider.enabled = true;
-        }
-    }*/
-
     IEnumerator TP()
     {
         // temporarily disable collider

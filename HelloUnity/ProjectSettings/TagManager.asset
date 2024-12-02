@@ -10,6 +10,7 @@ TagManager:
   - Green Tree
   - Tall Hedge
   - Med Hedge
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - Water
   - UI
   - Path
-  - 
-  - 
-  - 
+  - Environment
+  - Player
+  - Ground
   - 
   - 
   - 
