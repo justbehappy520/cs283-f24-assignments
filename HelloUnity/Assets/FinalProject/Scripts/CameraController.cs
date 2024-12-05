@@ -5,14 +5,14 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float mouseSensitivity = 100.0f; // turning and looking
-    public Transform playerBody; // the player character
+    public Transform player; // the player character
     
     private float xRotation = 0.0f; // to rotate the camera around the x-axis
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -27,6 +27,6 @@ public class CameraController : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90); // to ensure cam rotate
 
         transform.localRotation = Quaternion.Euler(xRotation, 0.0f, 0.0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        player.Rotate(Vector3.up * mouseX);
     }
 }

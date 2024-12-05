@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     public int maxNumOfSpawn = 5;
     public float spawnDelay = 1.0f;
 
-    private int currentSpawnCount = 0;
+    // private int currentSpawnCount = 0;
 
     private List<GameObject> spawnedCollectables = new List<GameObject>();
 

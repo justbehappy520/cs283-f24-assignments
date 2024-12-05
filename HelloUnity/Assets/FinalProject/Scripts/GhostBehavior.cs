@@ -11,7 +11,7 @@ public class GhostBehavior : MonoBehaviour
     public float followRange = 10.0f;
     public float wanderRadius = 5.0f;
     public Transform[] teleports; // places to teleport the character to
-    public bool canTeleport = false; // flag to ensure no multiple teleportts
+    public bool canTeleport = true; // flag to ensure no multiple teleportts
     // public Animator ghostAnimator;
     // public bool hasWaved = false; // flag to ensure no excessive waving
 
@@ -22,10 +22,11 @@ public class GhostBehavior : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        // ghostAnimator.SetTrigger("Float");
         m_btRoot = BT.Root();
         BTNode teleport = BT.Sequence()
             .OpenBranch(
-            BT.Condition(() => InRange(teleRange)),
+            BT.Condition(() => InRange(teleRange) && canTeleport),
             BT.RunCoroutine(TeleBehavior));
         BTNode follow = BT.Sequence()
             .OpenBranch(
@@ -46,6 +47,11 @@ public class GhostBehavior : MonoBehaviour
     {
         // tick each frame!!
         m_btRoot.Tick();
+        if (!canTeleport)
+        {
+            Debug.Log("Manually resetting canTeleport.");
+            canTeleport = true;
+        }
     }
 
     private IEnumerator<BTState> TeleBehavior()
@@ -58,20 +64,23 @@ public class GhostBehavior : MonoBehaviour
             // hasWaved = true;
             // ghostAnimator.SetTrigger("Wave");
             
-            canTeleport = true;
+            Debug.Log("Can Teleport: " + canTeleport);
             int randomIndex = Random.Range(0, teleports.Length);
-            Debug.Log("Teleporting Player to: " + teleports[randomIndex].position);
             Vector3 destination = teleports[randomIndex].position;
+            Debug.Log("Teleporting Player to: " + destination);
 
             // set teleport flag
             target.GetComponent<PlayerCharacter>().isTeleporting = true;
 
             // teleport player
+            Debug.Log("Player Location Before: " + target.transform.position);
             target.transform.position = destination;
+            Debug.Log("Player Location After: " + target.transform.position);
 
             // reset teleport flag
             target.GetComponent<PlayerCharacter>().isTeleporting = false;
             canTeleport = false;
+            Debug.Log("Can Teleport: " + canTeleport);
             // hasWaved = false;
         }
         yield return BTState.Success;
@@ -79,12 +88,21 @@ public class GhostBehavior : MonoBehaviour
 
     private IEnumerator<BTState> FollowBehavior()
     {
+        if (!canTeleport)
+        {
+            Debug.Log("FollowBehavior called. Resetting canTeleport.");
+            canTeleport = true;
+            Debug.Log("Can Teleport: " + canTeleport);
+        }
+
         float distance = Vector3.Distance(transform.position, target.position);
 
         if (distance <= followRange)
         {
             // set target as destination when in range
-            Debug.Log("Setting destination to: " + target.position);
+            // Debug.Log("Target Spotted!");
+            agent.ResetPath();
+            // Debug.Log("Following Player: " + target.position);
             agent.SetDestination(target.position);
             yield return BTState.Continue;
         }
@@ -98,6 +116,13 @@ public class GhostBehavior : MonoBehaviour
 
     private IEnumerator<BTState> WanderBehavior()
     {
+        if (!canTeleport)
+        {
+            Debug.Log("WanderBehavior called. Resetting canTeleport.");
+            canTeleport = true;
+            Debug.Log("Can Teleport: " + canTeleport);
+        }
+
         Vector3 randomDir = Random.insideUnitSphere * wanderRadius;
         randomDir += transform.position;
 
@@ -106,11 +131,11 @@ public class GhostBehavior : MonoBehaviour
         if (NavMesh.SamplePosition(randomDir, out hit, wanderRadius, NavMesh.AllAreas))
         {
             agent.SetDestination(hit.position);
-            Debug.Log("Wandering to: " + hit.position);
+            // Debug.Log("Wandering to: " + hit.position);
         }
         else
         {
-            Debug.Log("No valid wander destination found.");
+            // Debug.Log("No valid wander destination found.");
         }
 
         // wait for agent to reach destination
@@ -125,6 +150,7 @@ public class GhostBehavior : MonoBehaviour
     private bool InRange(float range)
     {
         bool inRange = Vector3.Distance(transform.position, target.position) <= range;
+        Debug.Log($"Distance: {Vector3.Distance(transform.position, target.position)}, Range: {range}");
         return inRange;
     }
 }
