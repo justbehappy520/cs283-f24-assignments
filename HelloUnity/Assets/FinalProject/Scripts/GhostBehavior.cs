@@ -12,8 +12,6 @@ public class GhostBehavior : MonoBehaviour
     public float wanderRadius = 5.0f;
     public Transform[] teleports; // places to teleport the character to
     public bool canTeleport = true; // flag to ensure no multiple teleportts
-    // public Animator ghostAnimator;
-    // public bool hasWaved = false; // flag to ensure no excessive waving
 
     private NavMeshAgent agent;
     private Root m_btRoot;
@@ -22,7 +20,6 @@ public class GhostBehavior : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        // ghostAnimator.SetTrigger("Float");
         m_btRoot = BT.Root();
         BTNode teleport = BT.Sequence()
             .OpenBranch(
@@ -61,27 +58,23 @@ public class GhostBehavior : MonoBehaviour
 
         if (distance <= teleRange)
         {
-            // hasWaved = true;
-            // ghostAnimator.SetTrigger("Wave");
+            canTeleport = true;
             
             Debug.Log("Can Teleport: " + canTeleport);
             int randomIndex = Random.Range(0, teleports.Length);
             Vector3 destination = teleports[randomIndex].position;
             Debug.Log("Teleporting Player to: " + destination);
 
-            // set teleport flag
-            target.GetComponent<PlayerCharacter>().isTeleporting = true;
-
             // teleport player
             Debug.Log("Player Location Before: " + target.transform.position);
+            target.GetComponent<CharacterController>().enabled = false;
             target.transform.position = destination;
+            target.GetComponent<CharacterController>().enabled = true;
             Debug.Log("Player Location After: " + target.transform.position);
 
             // reset teleport flag
-            target.GetComponent<PlayerCharacter>().isTeleporting = false;
             canTeleport = false;
             Debug.Log("Can Teleport: " + canTeleport);
-            // hasWaved = false;
         }
         yield return BTState.Success;
     }

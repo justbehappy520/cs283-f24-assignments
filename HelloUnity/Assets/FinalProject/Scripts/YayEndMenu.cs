@@ -24,12 +24,12 @@ public class YayEndMenu : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("FinalProject");
+        SceneManager.LoadSceneAsync(1);
         // restarts game mechanics
         Time.timeScale = 1;
     }

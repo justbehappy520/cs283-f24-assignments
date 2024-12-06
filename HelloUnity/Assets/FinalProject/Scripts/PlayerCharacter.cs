@@ -30,10 +30,10 @@ public class PlayerCharacter : MonoBehaviour
     void Update()
     {
         // skip movement if teleporting
-        if (isTeleporting)
+        /*if (isTeleporting)
         {
             return;
-        }
+        }*/
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance,
             groundMask);
