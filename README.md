@@ -2,12 +2,28 @@
 Assignment framework for CS283 Game Programming
 
 # Final Project
+### Environment
+![Scene_Map](https://github.com/user-attachments/assets/3ec67e5d-fab5-4473-b76e-e199cd6039f6)
+
+![Scene_Outside](https://github.com/user-attachments/assets/db4975ad-0299-4ae6-8a93-6f6311f700e2)
+
+![Scene_Gate](https://github.com/user-attachments/assets/c62d4bda-a8a4-4828-aeee-7674d7de62d2)
+
+![Scene_Fire](https://github.com/user-attachments/assets/a943b08e-89f8-4fe6-acff-26ac9cf6d469)
+
+https://github.com/user-attachments/assets/5a599bc6-af85-4d24-be01-0632a129f34d
+
+![Scene_Key](https://github.com/user-attachments/assets/fbc9c5ac-2c08-485f-92ca-285530933a39)
+
+https://github.com/user-attachments/assets/ede1a8f1-6bf0-4f9a-95e2-c04cbe0608da
+
 ### Ghost NPC
 ![Ghost_Still](https://github.com/user-attachments/assets/4c359ff8-1bf9-41de-8150-0ff5f184e11b)
 
 https://github.com/user-attachments/assets/e52c12bd-c885-4b96-a193-7319c071b510
 
 ### Key Collection
+
 
 ### UI
 
