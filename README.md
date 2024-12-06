@@ -1,6 +1,41 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
+# Final Project
+### Environment
+![Scene_Map](https://github.com/user-attachments/assets/3ec67e5d-fab5-4473-b76e-e199cd6039f6)
+
+![Scene_Outside](https://github.com/user-attachments/assets/db4975ad-0299-4ae6-8a93-6f6311f700e2)
+
+![Scene_Gate](https://github.com/user-attachments/assets/c62d4bda-a8a4-4828-aeee-7674d7de62d2)
+
+![Scene_Fire](https://github.com/user-attachments/assets/a943b08e-89f8-4fe6-acff-26ac9cf6d469)
+
+https://github.com/user-attachments/assets/5a599bc6-af85-4d24-be01-0632a129f34d
+
+![Scene_Key](https://github.com/user-attachments/assets/fbc9c5ac-2c08-485f-92ca-285530933a39)
+
+### Ghost NPC
+![Ghost_Still](https://github.com/user-attachments/assets/4c359ff8-1bf9-41de-8150-0ff5f184e11b)
+
+https://github.com/user-attachments/assets/e52c12bd-c885-4b96-a193-7319c071b510
+
+### Key Collection
+https://github.com/user-attachments/assets/932b7af6-4173-48fc-b1f5-27c79e0b3498
+
+https://github.com/user-attachments/assets/31f62244-52a4-4a6e-886a-9ccc5ce16d94
+
+### UI
+https://github.com/user-attachments/assets/27d933ee-7f96-4b72-8825-fcd931c34ed0
+
+https://github.com/user-attachments/assets/3089cb88-7ec4-410f-a608-3ca6bba217c6
+
+https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
+
+https://github.com/user-attachments/assets/8f619019-da56-41b1-b94d-46c73c685f65
+
+**Resources**: 
+
 # A10: Behavior
 ### Minion
 https://github.com/user-attachments/assets/915a2e12-fd63-4876-a33a-06d83360de60
