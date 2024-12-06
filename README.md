@@ -5,6 +5,8 @@ Assignment framework for CS283 Game Programming
 ### Player Character
 
 ### Ghost NPC
+![Ghost_Still](https://github.com/user-attachments/assets/4c359ff8-1bf9-41de-8150-0ff5f184e11b)
+https://github.com/user-attachments/assets/e52c12bd-c885-4b96-a193-7319c071b510
 
 ### Key Collection
 
