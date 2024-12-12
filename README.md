@@ -46,9 +46,9 @@ https://github.com/user-attachments/assets/932b7af6-4173-48fc-b1f5-27c79e0b3498
 
 https://github.com/user-attachments/assets/31f62244-52a4-4a6e-886a-9ccc5ce16d94
 
-**Description:** 
+**Description:** The famed key to the wrought iron fence!! Your ultimate goal and your ticket to freedom is this little key that magically floats and spins above the ground. Located at the center-ish of the maze, you must brave the unknown paths, seek out the center, and collect the key!!
 
-**Script:** 
+**Script:** The KeyHoverAnimation.cs and KeyCollectAnimation.cs are the scripts that implement the animation behavior of the key while idle or while being collected. The CollectMechanism.cs is the script that implements the deactivation of the key and the updating of the in-game UI when the key is collected by the player.
 
 ### Lives Tracker
 
