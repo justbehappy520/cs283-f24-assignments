@@ -63,23 +63,23 @@ https://github.com/user-attachments/assets/27d933ee-7f96-4b72-8825-fcd931c34ed0
 
 **Description:** The UI of the main menu screen is implemented on another scene entirely, MainMenu.unity. Initially, I planned to set it up as another UI screen in the Project.unity scene. However, I figured it wouldn't hurt to leave myself open to the possibility of adding levels should I choose to come back to this project at a later date, and it would be easier to uniformize the main menu screen in this way.
 
-**Script:** The MainMenu.cs script implements the behavior of the buttons on the start screen UI. The 'START' button starts the game
+**Script:** The MainMenu.cs script implements the behavior of the buttons on the start screen UI. The 'START' button starts the game, starting the player by the gate of the maze. The 'HOW TO' button brings up an 'Instructions' box that explains how to play the game. There is a 'BACK' button at the bottom of the box. The 'EXIT' button quits the game entirely.
 
 https://github.com/user-attachments/assets/3089cb88-7ec4-410f-a608-3ca6bba217c6
 
-**Description:** 
+**Description:** The pause menu can be accessed via the square pause button in the bottom right hand corner. Once the button is clicked, all elements of the game will freeze, and the pause menu will appear over the current game screen.
 
-**Script:** The PauseMenu.cs script implements the behavior of the buttons on the pause screen UI.
+**Script:** The PauseMenu.cs script implements the behavior of the buttons on the pause screen UI. The 'RESUME' button continues the game right where the player left off. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' buttons sends the player back to the main menu screen.
 
 https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
 
-**Description:** 
+**Description:** When the player successfully collects the key and makes it back to the gate, a collider on an invisible box right in front of the gate will trigger the congratulations screen. The screen congratulates the player with short message and offers two buttons: 'RESTART' and 'MAIN MENU'.
 
-**Script:** The YayEndMenu.cs script implements the behavior of the buttons on the good-ending game over screen UI.
+**Script:** The YayEndMenu.cs script implements the behavior of the buttons on the good-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' buttons sends the player back to the main menu screen.
 
-**Description:** 
+**Description:** When the player loses all three lives at the hands of the bear, this triggers the game over screen. The screen consoles the player with a short message and offers two buttons: 'RESTART' and 'MAIN MENU'.
 
-**Script:** The NayEndMenu.cs script implements the behavior of the buttons on the bad-ending game over screen UI.
+**Script:** The NayEndMenu.cs script implements the behavior of the buttons on the bad-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' buttons sends the player back to the main menu screen.
 
 ### Notes
 
