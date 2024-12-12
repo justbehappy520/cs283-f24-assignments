@@ -46,6 +46,8 @@ https://github.com/user-attachments/assets/932b7af6-4173-48fc-b1f5-27c79e0b3498
 
 https://github.com/user-attachments/assets/31f62244-52a4-4a6e-886a-9ccc5ce16d94
 
+https://github.com/user-attachments/assets/8f619019-da56-41b1-b94d-46c73c685f65
+
 **Description:** The famed key to the wrought iron fence!! Your ultimate goal and your ticket to freedom is this little key that magically floats and spins above the ground. Located at the center-ish of the maze, you must brave the unknown paths, seek out the center, and collect the key!!
 
 **Script:** The KeyHoverAnimation.cs and KeyCollectAnimation.cs are the scripts that implement the animation behavior of the key while idle or while being collected. The CollectMechanism.cs is the script that implements the deactivation of the key and the updating of the in-game UI when the key is collected by the player.
@@ -59,15 +61,25 @@ https://github.com/user-attachments/assets/31f62244-52a4-4a6e-886a-9ccc5ce16d94
 ### UI
 https://github.com/user-attachments/assets/27d933ee-7f96-4b72-8825-fcd931c34ed0
 
+**Description:** 
+
+**Script:** The MainMenu.cs script implements the behavior of the buttons on the start screen UI.
+
 https://github.com/user-attachments/assets/3089cb88-7ec4-410f-a608-3ca6bba217c6
-
-https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
-
-https://github.com/user-attachments/assets/8f619019-da56-41b1-b94d-46c73c685f65
 
 **Description:** 
 
-**Script:** 
+**Script:** The PauseMenu.cs script implements the behavior of the buttons on the pause screen UI.
+
+https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
+
+**Description:** 
+
+**Script:** The YayEndMenu.cs script implements the behavior of the buttons on the good-ending game over screen UI.
+
+**Description:** 
+
+**Script:** The NayEndMenu.cs script implements the behavior of the buttons on the bad-ending game over screen UI.
 
 ### Notes
 
