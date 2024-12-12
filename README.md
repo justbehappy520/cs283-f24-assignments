@@ -3,15 +3,24 @@ Assignment framework for CS283 Game Programming
 
 # Final Project: Summer Camp
 ### Instructions
-**How to Build:** 
+**How to Build:** The scene is located in the Project folder in Assets under HelloUnity. The start screen of the game is on the MainMenu.unity scene, while the actual game is on the Project.unity scene. Start on the MainMenu.unity scene as the Project.unity scene is reachable via the UI buttons.
 
-**How to Play:**
+**How to Play:** It's summer vacation!! And you know what that means? No school, no homework, just beaches and sunshine and fun!! That is, until your parents ship you off to some random summer camp off in the far-flung woods of who-knows-where.
+
+To make things worse, first day of camp, and you wake up under sunny skies rather than in your bunk. You're confused, utterly lost, and now stuck in a seemingly endless green maze locked behind a wrought iron gate. Just great.
+
+Main Objective: Explore the maze to find the key and unlock the gate!! The ghosts might not hurt you, but beware of the bear...
 
 ### Player
+![Player_Capsule](https://github.com/user-attachments/assets/d94ba6e8-4b30-412a-b2ca-c8044319a3fd)
 
-**Description:** 
+https://github.com/user-attachments/assets/fb048cc3-88ac-4cb4-aa4c-f8dcaf218d27
 
-**Script:** 
+https://github.com/user-attachments/assets/e771115e-59f9-4eee-8639-ea7a69a30da4
+
+**Description:** The player is a simple capsule player with a first-person camera hidden in its head. I implemented the camera a first-person rather than third-person because I thought that would allow for a better gaming experience, looking around at the scenery, and being startled by silent ghosts and the bear sneaking up behind the player.
+
+**Script:** The player's movements is implemented by the PlayerCharacter.cs, which successfully implements gravity (that was a tricky bit I struggled with on the homework) and basic movement. The camera's mechanism is implemented by the CameraController.cs.
 
 ### Environment
 ![Scene_Map](https://github.com/user-attachments/assets/3ec67e5d-fab5-4473-b76e-e199cd6039f6)
