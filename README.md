@@ -52,9 +52,9 @@ https://github.com/user-attachments/assets/035bccbc-de1b-49b8-9ef7-2069c766eab0
 https://github.com/user-attachments/assets/99328605-c239-449e-9f93-6cfc0347c590
 
 
-**Description:** Just a (mostly) friendly little guy wandering around. He's strangely translucent in the sense that you can see his individual working body parts, but that's what makes him so special (and not my utter confusion as to why the little guy exported like that). This poor bear has been trapped in this maze for so long, just longing for a friend, but his paws are just a tad too sharp, a single swing and you lose a heart (cry).
+**Description:** Just a (mostly) friendly little guy wandering around. He's strangely translucent in the sense that you can see his individual working body parts, but that's what makes him so special (and not my utter confusion as to why the little guy exported like that). This poor bear has been trapped in this maze for so long, just longing for a friend, but his paws are just a tad too sharp, a single swing and you lose (cry).
 
-**Script:** The BearBehavior.cs implements a behavior tree for the bear NPC's behavior. Like the ghost, the bear can also wander and will follow the player if in range. Unlike the ghost, the bear "attacks" the player upon contact with the player. When the bear comes into close range with the player, the player loses a heart, and the game restarts the player back by the gate, resetting any progress made by the player.
+**Script:** The BearBehavior.cs implements a behavior tree for the bear NPC's behavior. Like the ghost, the bear can also wander and will follow the player if in range. Unlike the ghost, the bear "attacks" the player upon contact with the player. When the bear comes into close range with the player, the player loses, and the game brings up the sad ending game over screen.
 
 The bear has an added head tilting animation that plays when the bear is about to "attack" the player (there is no attack animation). Otherwise, the normal walking animation plays for the bear as he wanders around in the maze.
 
@@ -68,12 +68,6 @@ https://github.com/user-attachments/assets/8f619019-da56-41b1-b94d-46c73c685f65
 **Description:** The famed key to the wrought iron fence!! Your ultimate goal and your ticket to freedom is this little key that magically floats and spins above the ground. Located at the center-ish of the maze, you must brave the unknown paths, seek out the center, and collect the key!!
 
 **Script:** The KeyHoverAnimation.cs and KeyCollectAnimation.cs are the scripts that implement the animation behavior of the key while idle or while being collected. The CollectMechanism.cs is the script that implements the deactivation of the key and the updating of the in-game UI when the key is collected by the player.
-
-### Lives Tracker
-
-**Description:** 
-
-**Script:** 
 
 ### UI
 https://github.com/user-attachments/assets/27d933ee-7f96-4b72-8825-fcd931c34ed0
@@ -100,7 +94,6 @@ https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
 
 ### Notes
 
-**Resources:** 
 
 # A10: Behavior
 ### Minion
