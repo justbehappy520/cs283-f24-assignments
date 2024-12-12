@@ -21,6 +21,11 @@ public class GhostBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         m_btRoot = BT.Root();
+        if (m_btRoot == null)
+        {
+            Debug.LogError("Behavior Tree Root is null!");
+            return;
+        }
         BTNode teleport = BT.Sequence()
             .OpenBranch(
             BT.Condition(() => InRange(teleRange) && canTeleport),
@@ -46,7 +51,6 @@ public class GhostBehavior : MonoBehaviour
         m_btRoot.Tick();
         if (!canTeleport)
         {
-            Debug.Log("Manually resetting canTeleport.");
             canTeleport = true;
         }
     }
@@ -60,21 +64,16 @@ public class GhostBehavior : MonoBehaviour
         {
             canTeleport = true;
             
-            Debug.Log("Can Teleport: " + canTeleport);
             int randomIndex = Random.Range(0, teleports.Length);
             Vector3 destination = teleports[randomIndex].position;
-            Debug.Log("Teleporting Player to: " + destination);
 
             // teleport player
-            Debug.Log("Player Location Before: " + target.transform.position);
             target.GetComponent<CharacterController>().enabled = false;
             target.transform.position = destination;
             target.GetComponent<CharacterController>().enabled = true;
-            Debug.Log("Player Location After: " + target.transform.position);
 
             // reset teleport flag
             canTeleport = false;
-            Debug.Log("Can Teleport: " + canTeleport);
         }
         yield return BTState.Success;
     }
@@ -83,9 +82,7 @@ public class GhostBehavior : MonoBehaviour
     {
         if (!canTeleport)
         {
-            Debug.Log("FollowBehavior called. Resetting canTeleport.");
             canTeleport = true;
-            Debug.Log("Can Teleport: " + canTeleport);
         }
 
         float distance = Vector3.Distance(transform.position, target.position);
@@ -111,9 +108,7 @@ public class GhostBehavior : MonoBehaviour
     {
         if (!canTeleport)
         {
-            Debug.Log("WanderBehavior called. Resetting canTeleport.");
             canTeleport = true;
-            Debug.Log("Can Teleport: " + canTeleport);
         }
 
         Vector3 randomDir = Random.insideUnitSphere * wanderRadius;
@@ -124,11 +119,6 @@ public class GhostBehavior : MonoBehaviour
         if (NavMesh.SamplePosition(randomDir, out hit, wanderRadius, NavMesh.AllAreas))
         {
             agent.SetDestination(hit.position);
-            // Debug.Log("Wandering to: " + hit.position);
-        }
-        else
-        {
-            // Debug.Log("No valid wander destination found.");
         }
 
         // wait for agent to reach destination
@@ -143,7 +133,6 @@ public class GhostBehavior : MonoBehaviour
     private bool InRange(float range)
     {
         bool inRange = Vector3.Distance(transform.position, target.position) <= range;
-        Debug.Log($"Distance: {Vector3.Distance(transform.position, target.position)}, Range: {range}");
         return inRange;
     }
 }

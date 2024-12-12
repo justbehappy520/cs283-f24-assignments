@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class NayEndMenu : MonoBehaviour
 {
+    // reference to NayEndScreen
+    public GameObject nayScreen;
     public void Menu()
     {
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("FinalProject");
+        SceneManager.LoadSceneAsync(1);
         // restarts game mechanics
         Time.timeScale = 1;
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class BearBehavior : MonoBehaviour
 {
@@ -11,9 +12,8 @@ public class BearBehavior : MonoBehaviour
     public float followRange = 10.0f;
     public float wanderRadius = 5.0f;
     public Animator bearAnimator;
-    public bool spotted = true;
-    public GameObject[] hearts;
-    private int index; // index of lives tracker
+    public bool canAttack = true;
+    public GameObject nayScreen; // nayEndScreen
 
     private NavMeshAgent agent;
     private Root m_btRoot;
@@ -22,16 +22,20 @@ public class BearBehavior : MonoBehaviour
     void Start()
     {
         bearAnimator = GetComponent<Animator>();
-        index = hearts.Length;
         agent = GetComponent<NavMeshAgent>();
         m_btRoot = BT.Root();
+        if (m_btRoot == null)
+        {
+            Debug.LogError("Behavior Tree Root is null!");
+            return;
+        }
         BTNode attack = BT.Sequence()
             .OpenBranch(
-            BT.Condition(() => InRange(attackRange)),
+            BT.Condition(() => InRange(attackRange) && canAttack),
             BT.RunCoroutine(AttackBehavior));
         BTNode follow = BT.Sequence()
             .OpenBranch(
-            BT.Condition(() => InRange(followRange) && !InRange(attackRange) && spotted),
+            BT.Condition(() => InRange(followRange) && !InRange(attackRange)),
             BT.RunCoroutine(FollowBehavior));
         BTNode wander = BT.Sequence()
             .OpenBranch(
@@ -52,41 +56,30 @@ public class BearBehavior : MonoBehaviour
 
     private IEnumerator<BTState> AttackBehavior()
     {
-        if (!spotted)
+        agent.ResetPath();
+        bearAnimator.SetTrigger("isTilting");
+        canAttack = true;
+        if (canAttack)
         {
-            spotted = true;
-        }
-
-        float distance = Vector3.Distance(transform.position, target.position);
-
-        if (distance <= attackRange)
-        {
-            agent.ResetPath();
-            if (index != 0)
-            {
-                hearts[index].SetActive(false);
-                index--;
-            }
-
-            yield return BTState.Continue;
+            Debug.Log("Attacking");
+            EndGame();
+            canAttack = false;
         }
         yield return BTState.Success;
     }
 
     private IEnumerator<BTState> FollowBehavior()
     {
+        if (!canAttack)
+        {
+            canAttack = true;
+        }
+
         float distance = Vector3.Distance(transform.position, target.position);
 
         if (distance <= followRange)
         {
             agent.ResetPath();
-
-            spotted = true;
-            if (spotted)
-            {
-                bearAnimator.SetTrigger("isTilting");
-                spotted = false;
-            }
 
             // set target as destination when in range
             agent.SetDestination(target.position);
@@ -102,9 +95,9 @@ public class BearBehavior : MonoBehaviour
 
     private IEnumerator<BTState> WanderBehavior()
     {
-        if (!spotted)
+        if (!canAttack)
         {
-            spotted = true;
+            canAttack = true;
         }
 
         Vector3 randomDir = Random.insideUnitSphere * wanderRadius;
@@ -130,5 +123,11 @@ public class BearBehavior : MonoBehaviour
     {
         bool inRange = Vector3.Distance(transform.position, target.position) <= range;
         return inRange;
+    }
+
+    private void EndGame()
+    {
+        Time.timeScale = 0;
+        nayScreen.SetActive(true);
     }
 }

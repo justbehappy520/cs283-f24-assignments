@@ -351,7 +351,18 @@ PrefabInstance:
       value: A9 lvl.Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3789030921748150336, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 2942447469483866240, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 1911502328585988665, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 2563805878850610819, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 3499068081037360058, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 8493909438908699242, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 8653050569526817365, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 9066244866887143004, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 7663215635572077438, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 8925314677092409906, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
+    - {fileID: 2679140907517969913, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f982cfbdaf839474abe720fd6de72803, type: 3}
