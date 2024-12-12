@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/5a599bc6-af85-4d24-be01-0632a129f34d
 
 https://github.com/user-attachments/assets/e52c12bd-c885-4b96-a193-7319c071b510
 
-**Description:** Across the maze wanders five ghosts, just a little gimmick made by the Camp Director, or remnants of past campers trapped forever in the unending green...? All the same, the little ghosts are rather cute, and mostly harmless. They typically wander the maze aimlessly, as if they've lost all direction. When you draw near them, they turn to trail after you instead. Should you come into contact with them, you will find yourself teleported to one of five random locations in the maze. I hope you get your bearings straight haha.
+**Description:** Across the maze wanders five ghosts, just a little gimmick set up by the Camp Director, or remnants of past campers trapped forever in the unending green...? All the same, the little ghosts are rather cute, and mostly harmless. They typically wander the maze aimlessly, as if they've lost all direction. When you draw near them, they turn to trail after you instead. Should you come into contact with them, you will find yourself teleported to one of five random locations in the maze. I hope you get your bearings straight haha.
 
 **Script:** The ghost NPC's behavior is implemented in the GhostBehavior.cs script. This script is composed of a simple behavior tree with a wander behavior, a follow behavior, and a newly implemented teleport behavior. The behaviors are dictated by distance from player such that the ghost will teleport the player to a random set location if close enough, follow player is within range, and wander otherwise.
 
@@ -61,9 +61,9 @@ https://github.com/user-attachments/assets/8f619019-da56-41b1-b94d-46c73c685f65
 ### UI
 https://github.com/user-attachments/assets/27d933ee-7f96-4b72-8825-fcd931c34ed0
 
-**Description:** 
+**Description:** The UI of the main menu screen is implemented on another scene entirely, MainMenu.unity. Initially, I planned to set it up as another UI screen in the Project.unity scene. However, I figured it wouldn't hurt to leave myself open to the possibility of adding levels should I choose to come back to this project at a later date, and it would be easier to uniformize the main menu screen in this way.
 
-**Script:** The MainMenu.cs script implements the behavior of the buttons on the start screen UI.
+**Script:** The MainMenu.cs script implements the behavior of the buttons on the start screen UI. The 'START' button starts the game
 
 https://github.com/user-attachments/assets/3089cb88-7ec4-410f-a608-3ca6bba217c6
 
