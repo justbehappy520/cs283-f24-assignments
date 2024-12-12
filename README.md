@@ -45,10 +45,18 @@ https://github.com/user-attachments/assets/e52c12bd-c885-4b96-a193-7319c071b510
 **Script:** The ghost NPC's behavior is implemented in the GhostBehavior.cs script. This script is composed of a simple behavior tree with a wander behavior, a follow behavior, and a newly implemented teleport behavior. The behaviors are dictated by distance from player such that the ghost will teleport the player to a random set location if close enough, follow player is within range, and wander otherwise.
 
 ### Bear NPC
+![Bear_Still](https://github.com/user-attachments/assets/7e4eec81-3099-4c72-9426-e2d4a3b67d77)
+
+https://github.com/user-attachments/assets/035bccbc-de1b-49b8-9ef7-2069c766eab0
+
+https://github.com/user-attachments/assets/99328605-c239-449e-9f93-6cfc0347c590
+
 
 **Description:** Just a (mostly) friendly little guy wandering around. He's strangely translucent in the sense that you can see his individual working body parts, but that's what makes him so special (and not my utter confusion as to why the little guy exported like that). This poor bear has been trapped in this maze for so long, just longing for a friend, but his paws are just a tad too sharp, a single swing and you lose a heart (cry).
 
-**Script:** 
+**Script:** The BearBehavior.cs implements a behavior tree for the bear NPC's behavior. Like the ghost, the bear can also wander and will follow the player if in range. Unlike the ghost, the bear "attacks" the player upon contact with the player. When the bear comes into close range with the player, the player loses a heart, and the game restarts the player back by the gate, resetting any progress made by the player.
+
+The bear has an added head tilting animation that plays when the bear is about to "attack" the player (there is no attack animation). Otherwise, the normal walking animation plays for the bear as he wanders around in the maze.
 
 ### Key Collection
 https://github.com/user-attachments/assets/932b7af6-4173-48fc-b1f5-27c79e0b3498
@@ -84,11 +92,11 @@ https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
 
 **Description:** When the player successfully collects the key and makes it back to the gate, a collider on an invisible box right in front of the gate will trigger the congratulations screen. The screen congratulates the player with short message and offers two buttons: 'RESTART' and 'MAIN MENU'.
 
-**Script:** The YayEndMenu.cs script implements the behavior of the buttons on the good-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' buttons sends the player back to the main menu screen.
+**Script:** The YayEndMenu.cs script implements the behavior of the buttons on the good-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' button sends the player back to the main menu screen.
 
 **Description:** When the player loses all three lives at the hands of the bear, this triggers the game over screen. The screen consoles the player with a short message and offers two buttons: 'RESTART' and 'MAIN MENU'.
 
-**Script:** The NayEndMenu.cs script implements the behavior of the buttons on the bad-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' buttons sends the player back to the main menu screen.
+**Script:** The NayEndMenu.cs script implements the behavior of the buttons on the bad-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' button sends the player back to the main menu screen.
 
 ### Notes
 
