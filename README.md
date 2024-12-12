@@ -1,7 +1,18 @@
 # cs283-f24-assignments
 Assignment framework for CS283 Game Programming
 
-# Final Project
+# Final Project: Summer Camp
+### Instructions
+**How to Build:** 
+
+**How to Play:**
+
+### Player
+
+**Description:** 
+
+**Script:** 
+
 ### Environment
 ![Scene_Map](https://github.com/user-attachments/assets/3ec67e5d-fab5-4473-b76e-e199cd6039f6)
 
@@ -20,10 +31,30 @@ https://github.com/user-attachments/assets/5a599bc6-af85-4d24-be01-0632a129f34d
 
 https://github.com/user-attachments/assets/e52c12bd-c885-4b96-a193-7319c071b510
 
+**Description:** Across the maze wanders five ghosts, just a little gimmick made by the Camp Director, or remnants of past campers trapped forever in the unending green...? All the same, the little ghosts are rather cute, and mostly harmless. They typically wander the maze aimlessly, as if they've lost all direction. When you draw near them, they turn to trail after you instead. Should you come into contact with them, you will find yourself teleported to one of five random locations in the maze. I hope you get your bearings straight haha.
+
+**Script:** The ghost NPC's behavior is implemented in the GhostBehavior.cs script. This script is composed of a simple behavior tree with a wander behavior, a follow behavior, and a newly implemented teleport behavior. The behaviors are dictated by distance from player such that the ghost will teleport the player to a random set location if close enough, follow player is within range, and wander otherwise.
+
+### Bear NPC
+
+**Description:** Just a (mostly) friendly little guy wandering around. He's strangely translucent in the sense that you can see his individual working body parts, but that's what makes him so special (and not my utter confusion as to why the little guy exported like that). This poor bear has been trapped in this maze for so long, just longing for a friend, but his paws are just a tad too sharp, a single swing and you lose a heart (cry).
+
+**Script:** 
+
 ### Key Collection
 https://github.com/user-attachments/assets/932b7af6-4173-48fc-b1f5-27c79e0b3498
 
 https://github.com/user-attachments/assets/31f62244-52a4-4a6e-886a-9ccc5ce16d94
+
+**Description:** 
+
+**Script:** 
+
+### Lives Tracker
+
+**Description:** 
+
+**Script:** 
 
 ### UI
 https://github.com/user-attachments/assets/27d933ee-7f96-4b72-8825-fcd931c34ed0
@@ -34,7 +65,13 @@ https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
 
 https://github.com/user-attachments/assets/8f619019-da56-41b1-b94d-46c73c685f65
 
-**Resources**: 
+**Description:** 
+
+**Script:** 
+
+### Notes
+
+**Resources:** 
 
 # A10: Behavior
 ### Minion
