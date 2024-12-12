@@ -51,6 +51,7 @@ https://github.com/user-attachments/assets/035bccbc-de1b-49b8-9ef7-2069c766eab0
 
 https://github.com/user-attachments/assets/99328605-c239-449e-9f93-6cfc0347c590
 
+https://github.com/user-attachments/assets/7978e5a9-b49f-4fc1-ac19-995317c471fe
 
 **Description:** Just a (mostly) friendly little guy wandering around. He's strangely translucent in the sense that you can see his individual working body parts, but that's what makes him so special (and not my utter confusion as to why the little guy exported like that). This poor bear has been trapped in this maze for so long, just longing for a friend, but his paws are just a tad too sharp, a single swing and you lose (cry).
 
@@ -88,12 +89,14 @@ https://github.com/user-attachments/assets/40ace5e5-419a-4add-99da-f9187dcbe580
 
 **Script:** The YayEndMenu.cs script implements the behavior of the buttons on the good-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' button sends the player back to the main menu screen.
 
+https://github.com/user-attachments/assets/bcdf4597-21e0-4f10-b2b8-6664c9cbe3cf
+
 **Description:** When the player loses all three lives at the hands of the bear, this triggers the game over screen. The screen consoles the player with a short message and offers two buttons: 'RESTART' and 'MAIN MENU'.
 
 **Script:** The NayEndMenu.cs script implements the behavior of the buttons on the bad-ending game over screen UI. The 'RESTART' button restarts the game, setting the player back by the gate of the maze. The 'MAIN MENU' button sends the player back to the main menu screen.
 
 ### Notes
-
+Overall, the newer aspects I explored through this project was mainly in the UI. I also got two NPC characters to work okay, although their behavior trees are very similar. But perhaps the greatest challenge of all was the building of the elements in the game. I made everything in Blender besides the player capsule and the campfires (those were made in Unity), and it was very fun! It's also why everything looks like it has far too many angles.
 
 # A10: Behavior
 ### Minion
